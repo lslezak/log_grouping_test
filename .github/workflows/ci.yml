@@ -16,16 +16,21 @@ jobs:
 
     - name: Test
       run: |
+        echo "Outside group"
+        echo "Outside group"
         echo "::group::My title"
         echo "Inside group"
         echo "Inside group"
         echo "Inside group"
-        echo "Inside group"
         echo "::group::Another group"
-        echo "Inside group2"
-        echo "Inside group2"
-        echo "Inside group2"
-        echo "Inside group2"
+        echo "Inside group 2"
+        echo "Inside group 2"
+        echo "::group::Yet Another group"
+        echo "Inside group 3"
+        echo "Inside group 3"
         echo "::endgroup::"
         echo "::endgroup::"
+        echo "::endgroup::"
+        echo "Outside group"
+        echo "Outside group"
 
