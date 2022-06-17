@@ -18,7 +18,13 @@ jobs:
       run: |
         echo "::group::My title"
         echo "Inside group"
+        echo "Inside group"
+        echo "Inside group"
+        echo "Inside group"
         echo "::group::Another group"
+        echo "Inside group2"
+        echo "Inside group2"
+        echo "Inside group2"
         echo "Inside group2"
         echo "::endgroup::"
         echo "::endgroup::"
