@@ -3839,7 +3839,7 @@
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_add-on'
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_add-on ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Disk Proposal, result: success
+::group::Disk Proposal, result: Format /dev/sda1 (/boot) with FAT (8Mib), format /dev/sda2 (/) with Btrfs (16GiB)
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"yes", "enable_next":"yes", "id":"initial_13", "label":"Disk", "name":"disk_proposal"]
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_disk_proposal ($["enable_back":true, "enable_next":true]) (11)
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_disk_proposal ($["enable_back":true, "enable_next":true])
