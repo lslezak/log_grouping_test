@@ -10491,6 +10491,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true])
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_addon_update_sources'
 2022-06-17 17:56:00 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_addon_update_sources
+::group::Adding update sources, result: skipped
 2022-06-17 17:56:00 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_addon_update_sources.rb
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 17:56:00 <1> install(3740) [Pkg] clients/inst_addon_update_sources.rb:57 Pkg Builtin called: TargetInitialize
@@ -10569,6 +10570,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:01 <1> install(3740) [Ruby] clients/inst_addon_update_sources.rb(main):66 sources for updates: $[]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] clients/inst_addon_update_sources.rb(main):71 sources to add: $[]
 2022-06-17 17:56:01 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
+::endgroup::
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_addon_update_sources'
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true]) returned `auto
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_27", "label":"Perform Installation", "name":"extrasources"]
