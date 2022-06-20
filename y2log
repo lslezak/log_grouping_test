@@ -26,6 +26,7 @@
 2022-06-17 15:46:44 <1> install(3740) [ui] YCP_UI.cc(SetApplicationTitle):1742 Setting application title to '"YaST2 - installation @ install                                                "'
 2022-06-17 15:46:44 <1> install(3740) [Interpreter] bin/y2start:60 Calling YaST client installation
 2022-06-17 15:46:44 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/installation.rb
+::group::Initialize installer, result: success
 2022-06-17 15:46:44 <1> install(3740) [Pkg] PkgModule.cc(instance):68 Redirecting ZYPP log to y2log
 2022-06-17 15:46:45 <1> install(3740) [Ruby] modules/ProductControl.rb(Init):1160 Candidates: ["/y2update/control.xml", "/control.xml", "/etc/YaST2/control.xml"]
 2022-06-17 15:46:45 <1> install(3740) [Ruby] modules/ProductControl.rb(Init):1168 Reading control file: /control.xml
@@ -176,6 +177,7 @@
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):87 Control file definition for add-on, visible: true, selected: false
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):111 Control file definition for productsources, visible: true, selected: true
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):123 Disabling second stage modules
+::endgroup::
 ::group::Initializing libstorage, result: success
 2022-06-17 11:46:40 <1> install(3740) [Ruby] y2storage/storage_manager.rb(create_instance):625 Creating Storage object
 2022-06-17 11:46:40 <1> install(3740) [libstorage] LockImpl.cc(Lock):57 getting read-write lock
