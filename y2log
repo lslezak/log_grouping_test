@@ -23,10 +23,10 @@
 2022-06-17 15:46:44 <1> install(3740) [qt-ui] YQApplication.cc(pickAutoFonts):471 Selecting auto fonts - normal: 10, heading: 12 (bold)
 2022-06-17 15:46:44 <1> install(3740) [qt-ui] YQApplication.cc(currentFont):339 Loaded 10 pixel font: Sans Serif,-1,10,5,50,0,0,0,0,0
 2022-06-17 15:46:44 <1> install(3740) [qt-ui] YQUI.cc(initUI):228 YQUI initialized. Thread ID: 0x0x7f10cff44700
-2022-06-17 15:46:44 <1> install(3740) [ui] YCP_UI.cc(SetApplicationTitle):1742 Setting application title to '"YaST2 - installation @ install                                                "'
+2022-06-17 15:46:44 <1> install(3740) [ui] YCP_UI.cc(SetApplicationTitle):1742 Setting application title to '"YaST2 - installation @ install
+::group::Initialize Installation, result: success                                                "'
 2022-06-17 15:46:44 <1> install(3740) [Interpreter] bin/y2start:60 Calling YaST client installation
 2022-06-17 15:46:44 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/installation.rb
-::group::Initialize installer, result: success
 2022-06-17 15:46:44 <1> install(3740) [Pkg] PkgModule.cc(instance):68 Redirecting ZYPP log to y2log
 2022-06-17 15:46:45 <1> install(3740) [Ruby] modules/ProductControl.rb(Init):1160 Candidates: ["/y2update/control.xml", "/control.xml", "/etc/YaST2/control.xml"]
 2022-06-17 15:46:45 <1> install(3740) [Ruby] modules/ProductControl.rb(Init):1168 Reading control file: /control.xml
@@ -129,7 +129,7 @@
 2022-06-17 15:46:45 <1> install(3740) [ui] YCP_UI.cc(SetApplicationIcon):1725 Setting application icon to "yast"
 2022-06-17 15:46:45 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YHelpButton for YPushButton "Help" at 0x7f10c824ab80 from function key F1
 2022-06-17 15:46:45 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YOKButton for YPushButton "Next" at 0x7f10c8ab6d60 from function key F10
-2022-06-17 15:46:45 <3> install(3740) [agent-ini] IniParser.cc(parse):558 Can not open /usr/share/applications/YaST2/installation.desktop.
+2022-06-17 1G5:46:45 <3> install(3740) [agent-ini] IniParser.cc(parse):558 Can not open /usr/share/applications/YaST2/installation.desktop.
 2022-06-17 15:46:45 <3> install(3740) [Interpreter] modules/Desktop.rb:363 SCR::Dir() failed
 2022-06-17 15:46:45 <3> install(3740) [Ruby] modules/Desktop.rb(ParseSingleDesktopFile):364 Unknown desktop file: installation
 2022-06-17 15:46:45 <1> install(3740) [Ruby] modules/Wizard.rb(SetDesktopTitleAndIcon):1185 Ops.get called on nil.
@@ -177,8 +177,6 @@
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):87 Control file definition for add-on, visible: true, selected: false
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):111 Control file definition for productsources, visible: true, selected: true
 2022-06-17 11:46:40 <1> install(3740) [Ruby] installation/inst_inc_first.rb(SetInitialInstallation):123 Disabling second stage modules
-::endgroup::
-::group::Initializing libstorage, result: success
 2022-06-17 11:46:40 <1> install(3740) [Ruby] y2storage/storage_manager.rb(create_instance):625 Creating Storage object
 2022-06-17 11:46:40 <1> install(3740) [libstorage] LockImpl.cc(Lock):57 getting read-write lock
 2022-06-17 11:46:40 <1> install(3740) [libstorage] LockImpl.cc(Lock):133 lock succeeded
@@ -525,7 +523,6 @@
 2022-06-17 11:46:41 <1> install(3740) [libstorage] Prober.cc(probe_sys_block_entries):151 sys_block_entries.mds <>
 2022-06-17 11:46:41 <1> install(3740) [libstorage] Prober.cc(probe_sys_block_entries):152 sys_block_entries.bcaches <>
 2022-06-17 11:46:41 <1> install(3740) [Ruby] installation/inst_inc_all.rb(SetDiskActivationModule):245 Disabling disk activation module
-::endgroup::
 2022-06-17 11:46:41 <1> install(3740) [Ruby] installation/misc.rb(UpdateWizardSteps):53 Switching Steps to installation 
 2022-06-17 11:46:41 <1> install(3740) [Ruby] installation/misc.rb(UpdateWizardSteps):59 Updating wizard steps: [$["mode":"installation", "stage":"initial"], $["mode":"installation", "stage":"continue"]]
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(UpdateWizardSteps):907 Disabled modules were changed
@@ -547,13 +544,14 @@
 2022-06-17 11:46:41 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_install_inf'
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_install_inf ($["enable_back":false, "enable_next":true]) returned `next
+::endgroup::
+::group::DHCP Setup, result: success
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_2", "label":"Network Autosetup", "name":"setup_dhcp"]
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_setup_dhcp ($["enable_back":true, "enable_next":true]) (1)
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_setup_dhcp ($["enable_back":true, "enable_next":true])
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_setup_dhcp'
 2022-06-17 11:46:41 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_setup_dhcp
 2022-06-17 11:46:41 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_setup_dhcp.rb
-::group::Initialize network, result: success
 2022-06-17 11:46:41 <1> install(3740) [Ruby] clients/inst_setup_dhcp.rb(set_dhcp_hostname!):66 Write dhcp hostname default: true
 2022-06-17 11:46:41 <1> install(3740) [Ruby] lib/cheetah.rb(record_commands):160 Executing "/usr/bin/rpm -q --whatprovides firewalld".
 2022-06-17 11:46:41 <1> install(3740) [Ruby] lib/cheetah.rb(log_stream_line):208 Standard output: no package provides firewalld
@@ -700,17 +698,17 @@
 2022-06-17 11:47:05 <1> install(3740) [Ruby] lib/cheetah.rb(log_stream_line):208 Standard output: install
 2022-06-17 11:47:05 <1> install(3740) [Ruby] lib/cheetah.rb(record_status):180 Status: 0
 2022-06-17 11:47:05 <1> install(3740) [Ruby] wicked/config_reader.rb(read):59 Sysconfig reader result: #<Y2Network::Config:0x000055f47b83b768 @backend=nil, @interfaces=#<Y2Network::InterfacesCollection:0x000055f4797547e8 @interfaces=[#<Y2Network::PhysicalInterface:0x000055f47a50ab58 @name="eth0", @type=#<Y2Network::InterfaceType:0x000055f47b766ab8 @my_textdomain=["network"], @name="Ethernet", @short_name="eth">, @renaming_mechanism=:mac, @hardware=#<Y2Network::Hwinfo:0x000055f47a50b238 @hwinfo={"name"=>"Ethernet Card 0", "type"=>"eth", "udi"=>"", "sysfs_id"=>"/devices/pci0000:00/0000:00:03.0/virtio0", "dev_name"=>"eth0", "requires"=>[], "modalias"=>"virtio:d00000001v00001AF4", "unique"=>"vWuh.VIRhsc57kTD", "driver"=>"virtio_net", "num"=>0, "drivers"=>[{"active"=>true, "modprobe"=>true, "modules"=>[["virtio_net", ""]]}], "active"=>true, "module"=>"virtio_net", "options"=>"", "bus"=>"Virtio", "busid"=>"0000:00:03.0", "sub_device_busid"=>"virtio0", "mac"=>"08:00:27:21:b0:67", "permanent_mac"=>"08:00:27:21:b0:67", "link"=>true, "wl_channels"=>nil, "wl_bitrates"=>nil, "wl_auth_modes"=>nil, "wl_enc_modes"=>nil}>, @description="eth0", @udev_rule=#<Y2Network::UdevRule:0x000055f47a3f9c28 @parts=[#<Y2Network::UdevRulePart:0x000055f47a3fada8 @key="SUBSYSTEM", @operator="==", @value="net">, #<Y2Network::UdevRulePart:0x000055f47a3fac68 @key="ACTION", @operator="==", @value="add">, #<Y2Network::UdevRulePart:0x000055f47a3fab28 @key="DRIVERS", @operator="==", @value="?*">, #<Y2Network::UdevRulePart:0x000055f47a3fa9e8 @key="ATTR{address}", @operator="==", @value="08:00:27:21:b0:67">, #<Y2Network::UdevRulePart:0x000055f47a3fa510 @key="ATTR{dev_id}", @operator="==", @value="0x0">, #<Y2Network::UdevRulePart:0x000055f47a3fa1a0 @key="ATTR{type}", @operator="==", @value="1">, #<Y2Network::UdevRulePart:0x000055f47a3f9ef8 @key="KERNEL", @operator="==", @value="eth*">, #<Y2Network::UdevRulePart:0x000055f47a3f9c78 @key="NAME", @operator="=", @value="eth0">]>, @custom_driver=nil>]>, @connections=#<Y2Network::ConnectionConfigsCollection:0x000055f47a5095a0 @connection_configs=[#<Y2Network::ConnectionConfig::Ethernet:0x000055f479839140 @id=2, @ip_aliases=[], @bootproto=#<Y2Network::BootProtocol:0x000055f47b77f338 @name="dhcp">, @ip=nil, @startmode=#<Y2Network::Startmodes::Auto:0x000055f4797a0da0 @my_textdomain=["network"], @name="auto", @alias_name=nil>, @ethtool_options=nil, @firewall_zone=nil, @hostnames=[], @name="eth0", @interface="eth0", @description=nil, @lladdress=nil, @mtu=nil>]>, @s390_devices=#<Y2Network::S390GroupDevicesCollection:0x000055f47a50a220 @devices=[]>, @drivers=[#<Y2Network::Driver:0x000055f479455538 @name="virtio_net", @params="">], @routing=#<Y2Network::Routing:0x000055f47b85c378 @tables=[#<Y2Network::RoutingTable:0x000055f47ba73a58 @routes=[]>], @forward_ipv4=false, @forward_ipv6=false>, @dns=#<Y2Network::DNS:0x000055f47b85a258 @nameservers=[], @searchlist=[], @resolv_conf_policy="auto">, @hostname=#<Y2Network::Hostname:0x000055f47b83b7e0 @static=nil, @transient="install", @installer=nil, @dhcp_hostname=:any>, @source=:wicked>
-::endgroup::
 2022-06-17 11:47:05 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_setup_dhcp'
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_setup_dhcp ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Self update, result: skipped
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_3", "label":"Installer Update", "name":"update_installer"]
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_update_installer ($["enable_back":true, "enable_next":true]) (2)
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_update_installer ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_update_installer'
 2022-06-17 11:47:05 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_update_installer
 2022-06-17 11:47:05 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_update_installer.rb
-::group::Instller self-update, result: skipped
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 11:47:05 <1> install(3740) [Ruby] clients/inst_update_installer.rb(rescue in require_registration_libraries):321 yast2-registration is not available
 2022-06-17 11:47:05 <1> install(3740) [Ruby] clients/inst_update_installer.rb(installer_updated?):205 /var/lib/YaST2/installer_updated does not exist
@@ -985,16 +983,16 @@
 2022-06-17 11:47:07 <1> install(3740) [zconfig] ZConfig.cc(notifyTargetChanged):634 notifyTargetChanged ()
 2022-06-17 11:47:07 <1> install(3740) [zypp::solver] Resolver.cc(setDefaultSolverFlags):118 setDefaultSolverFlags all=0
 2022-06-17 11:47:07 <1> install(3740) [locks++] Locks.cc(save):472 nothing changed in locks - no write to file
-::endgroup::
 2022-06-17 11:47:07 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_update_installer'
+::endgroup::
+::group::Initialize installation repository, result: success
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_update_installer ($["enable_back":true, "enable_next":true]) returned `next
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_4", "label":"Repositories Initialization", "name":"repositories_initialization"]
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_repositories_initialization ($["enable_back":true, "enable_next":true]) (3)
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_repositories_initialization ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_repositories_initialization'
 2022-06-17 11:47:07 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_repositories_initialization
-::group::Initializing package manager, result: success
 2022-06-17 11:47:07 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_repositories_initialization.rb
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/InstURL.rb(SSLVerificationEnabled):104 Option ssl_verify: nil
@@ -2285,16 +2283,16 @@
 2022-06-17 11:47:11 <1> install(3740) [Pkg] y2packager/product.rb:209 Pkg Builtin called: ResolvableInstall
 2022-06-17 11:47:11 <1> install(3740) [Pkg] Resolvable_Install.cc(ResolvableUpdateInstallOrDelete):280 Installing product Leap 
 2022-06-17 11:47:11 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_repositories_initialization'
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_repositories_initialization ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Product license, result: confirmed
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["arguments":$["first_run":"yes"], "enable_back":"no", "enable_next":"yes", "id":"initial_5", "label":"Welcome", "name":"complex_welcome", "retranslate":true]
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_complex_welcome ($["enable_back":false, "enable_next":true, "first_run":"yes"]) (4)
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_complex_welcome ($["enable_back":false, "enable_next":true, "first_run":"yes"])
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_complex_welcome'
 2022-06-17 11:47:11 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_complex_welcome
 2022-06-17 11:47:11 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_complex_welcome.rb
-::group::Displaying product license, result: accepted
 2022-06-17 11:47:11 <1> install(3740) [Pkg] y2packager/libzypp_product_spec.rb:37 Pkg Builtin called: PkgApplReset
 2022-06-17 11:47:11 <1> install(3740) [Pkg] y2packager/libzypp_product_spec.rb:38 Pkg Builtin called: PkgReset
 2022-06-17 11:47:11 <1> install(3740) [Ruby] y2packager/product.rb(select):208 Selecting product Leap to install
@@ -2385,9 +2383,9 @@
 2022-06-17 11:47:19 <1> install(3740) [zypp::satpool] PoolImpl.cc(setRequestedLocales):501 }
 2022-06-17 11:47:19 <1> install(3740) [Ruby] clients/inst_complex_welcome.rb(setup_final_choice):136 Language: 'en_US', system encoding 'UTF-8'
 2022-06-17 11:47:19 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_complex_welcome'
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_complex_welcome ($["enable_back":false, "enable_next":true, "first_run":"yes"]) returned `next
+::endgroup::
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1359 retranslate
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(retranslateWizardDialog):1177 Retranslating messages, redrawing wizard steps
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(UpdateWizardSteps):904 UpdateWizardSteps forced
@@ -2398,10 +2396,10 @@
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(FindMatchingWorkflow):499 Index 0 is out of array size
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(FindMatchingWorkflow):501 Index 0 is out of array size
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(block in AddWizardSteps):812 There are no (more) steps for $["mode":"installation", "stage":"continue"], section will be disabled
+::group::Network Activation, result skipped
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_6", "label":"Network Activation", "name":"lan"]
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_lan ($["enable_back":true, "enable_next":true]) (5)
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_lan ($["enable_back":true, "enable_next":true])
-::group::Manual network configuration, result: skipped
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_lan'
 2022-06-17 11:47:19 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_lan
 2022-06-17 11:47:19 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_lan.rb
@@ -2413,16 +2411,16 @@
 2022-06-17 11:47:19 <1> install(3740) [Ruby] clients/inst_lan.rb(block in main):75 Configured network found: true
 2022-06-17 11:47:19 <1> install(3740) [Ruby] clients/inst_lan.rb(log_and_return):91 Lan inst client finished, ret = auto
 2022-06-17 11:47:19 <1> install(3740) [Ruby] clients/inst_lan.rb(log_and_return):92 ----------------------------------------
-::endgroup::
 2022-06-17 11:47:19 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_lan'
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_lan ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::System Analysis, result: success
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_8", "label":"System Analysis", "name":"system_analysis"]
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_system_analysis ($["enable_back":true, "enable_next":true]) (6)
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_system_analysis ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_system_analysis'
 2022-06-17 11:47:19 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_system_analysis
-::group::System analysis, result: success
 2022-06-17 11:47:19 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_system_analysis.rb
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 11:47:19 <1> install(3740) [Ruby] clients/inst_system_analysis.rb(main):82 Probing done: false
@@ -3268,12 +3266,12 @@
 2022-06-17 11:47:22 <1> install(3740) [Ruby] clients/inst_system_analysis.rb(block in main):147 Function <YCPRef:boolean InitInstallationRepositories ()> returned true
 2022-06-17 11:47:22 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_system_analysis'
-::endgroup::
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_system_analysis ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Online Repositories, result: skipped
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"yes", "id":"initial_9", "label":"Online Repositories", "name":"productsources"]
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_productsources ($["enable_back":true, "enable_next":true]) (7)
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_productsources ($["enable_back":true, "enable_next":true])
-::group::Online repositories, result: skipped
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_productsources'
 2022-06-17 11:47:22 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_productsources
 2022-06-17 11:47:22 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_productsources.rb
@@ -3284,13 +3282,13 @@
 2022-06-17 11:47:22 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YOKButton for YPushButton "Yes" at 0x7f10c8e95250 from function key F10
 2022-06-17 11:47:22 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YCancelButton for YPushButton "No" at 0x7f10c8e96aa0 from function key F9
 2022-06-17 11:47:24 <1> install(3740) [Ruby] clients/inst_productsources.rb(main):131 Skipping module
-::endgroup::
 2022-06-17 11:47:24 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_productsources'
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_productsources ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Download Release Notes, result: success
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_10", "name":"download_release_notes"]
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_download_release_notes ($["enable_back":true, "enable_next":true]) (8)
-::group::Download release notes, result: success
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_download_release_notes ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_download_release_notes'
 2022-06-17 11:47:24 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_download_release_notes
@@ -3439,16 +3437,16 @@
 2022-06-17 11:47:25 <1> install(3740) [Ruby] release_notes_fetchers/url.rb(release_notes):117 Got release notes for Leap from URL http://doc.opensuse.org/release-notes/x86_64/openSUSE/Leap/15.4/release-notes-openSUSE.rpm with content preferences: language 'en_US', fallback language: 'en', and format 'rtf'
 2022-06-17 11:47:25 <1> install(3740) [Ruby] y2packager/release_notes_reader.rb(release_notes_via_reader):122 Release notes for Leap were found
 2022-06-17 11:47:25 <1> install(3740) [ui] YCP_UI.cc(SetReleaseNotes):1694 Setting release notes
-::endgroup::
 2022-06-17 11:47:25 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_download_release_notes'
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_download_release_notes ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Select System Role, result: selected KDE role
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_11", "name":"system_role"]
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_system_role ($["enable_back":true, "enable_next":true]) (9)
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_system_role ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_system_role'
 2022-06-17 11:47:25 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_system_role
-::group::Select system role, result: kde
 2022-06-17 11:47:25 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_system_role.rb
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
@@ -3824,26 +3822,26 @@
 2022-06-17 11:47:31 <1> install(3740) [zypp::solver] SATResolver.cc(solving):556 ....Solver end
 2022-06-17 11:47:31 <1> install(3740) [zypp::solver] SATResolver.cc(resolvePool):816 SATResolver::resolvePool() done. Ret:1
 2022-06-17 11:47:31 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_system_role'
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_system_role ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Add-ons, result: skipped
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_12", "label":"Add-On Products", "name":"add-on"]
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_add-on ($["enable_back":true, "enable_next":true]) (10)
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_add-on ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_add-on'
 2022-06-17 11:47:31 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_add-on
 2022-06-17 11:47:31 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_add-on.rb
-::group::Addons, result: skipped
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 11:47:32 <1> install(3740) [Pkg] modules/PackageCallbacks.rb:2556 Pkg Builtin called: CallbackMediaChange
 2022-06-17 11:47:32 <1> install(3740) [Pkg] modules/PackageCallbacks.rb:2562 Pkg Builtin called: CallbackSourceChange
-::endgroup::
 2022-06-17 11:47:32 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_add-on'
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_add-on ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Disk Proposal, result: success
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"yes", "enable_next":"yes", "id":"initial_13", "label":"Disk", "name":"disk_proposal"]
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_disk_proposal ($["enable_back":true, "enable_next":true]) (11)
-::group::Disk proposal, result: success
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_disk_proposal ($["enable_back":true, "enable_next":true])
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_disk_proposal'
 2022-06-17 11:47:32 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_disk_proposal
@@ -4415,12 +4413,12 @@ Storage ProposalSettings
 2022-06-17 11:47:47 <1> install(3740) [Ruby] y2storage/used_filesystems.rb(write):40 writing USED_FS_LIST btrfs
 2022-06-17 11:47:47 <1> install(3740) [Ruby] clients/inst_disk_proposal.rb(run):86 END of inst_disk_proposal (next)
 2022-06-17 11:47:47 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_disk_proposal'
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_disk_proposal ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Time Zone selection, result: TZ: Europe/Czech Republic, HW clock: true
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["arguments":$["first_run":"yes"], "enable_back":"yes", "id":"initial_14", "label":"Time Zone", "name":"timezone"]
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"]) (12)
-::group::Setting time zone, result: { "TZ" => "Europe/Prague", "NTP" => "servers"=>["0.opensuse.pool.ntp.org"]}
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"])
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_timezone'
 2022-06-17 11:47:47 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_timezone
@@ -4515,14 +4513,14 @@ Storage ProposalSettings
 2022-06-17 11:48:00 <1> install(3740) [Ruby] clients/ntp-client_proposal.rb(fallback_ntp_items):554 Proposing current timezone-based NTP server list
 2022-06-17 11:48:00 <1> install(3740) [Interpreter] timezone/dialogs.rb:175 Called YaST client returned.
 2022-06-17 11:48:00 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_timezone'
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"]) returned `next
+::endgroup::
+::group::User Configuration, result: root password set, initial user set, autologin enabled
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_15", "label":"User Settings", "name":"user_first"]
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_user_first ($["enable_back":true, "enable_next":true]) (13)
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_user_first ($["enable_back":true, "enable_next":true])
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_user_first'
-::group::User configuration, result: success
 2022-06-17 11:48:00 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_user_first
 2022-06-17 11:48:00 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_user_first.rb
 2022-06-17 17:48:00 <2> install(3740) [-e] YaPI is deprecated, do not use it anymore! It will be removed soon.
@@ -4605,7 +4603,6 @@ Storage ProposalSettings
 2022-06-17 17:48:09 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YOKButton for YPushButton "Yes" at 0x7f10c8ec19e0 from function key F10
 2022-06-17 17:48:09 <1> install(3740) [ui] YPushButton.cc(setFunctionKey):202 Guessing button role YCancelButton for YPushButton "No" at 0x7f10c8ce6010 from function key F9
 2022-06-17 17:48:10 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_user_first'
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_user_first ($["enable_back":true, "enable_next":true]) returned `next
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_16", "label":"User Settings", "name":"root_first"]
@@ -4618,11 +4615,12 @@ Storage ProposalSettings
 2022-06-17 17:48:10 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_root_first'
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_root_first ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Installation summary, reult: installation confirmed
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["heading":"yes", "id":"initial_17", "label":"Installation"]
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["execute":"inst_proposal", "id":"initial_18", "label":"Installation Overview", "name":"initial_installation_proposal", "proposal":"initial"]
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(getClientName):393 Step name 'initial_installation_proposal' executes 'inst_proposal'
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_proposal ($["enable_back":true, "enable_next":true, "proposal":"initial"]) (16)
-::group::Installation proposal, result: confirmed
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_proposal ($["enable_back":true, "enable_next":true, "proposal":"initial"])
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(getClientName):393 Step name 'initial_installation_proposal' executes 'inst_proposal'
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_initial_installation_proposal'
@@ -8493,15 +8491,15 @@ Storage ProposalSettings
 2022-06-17 17:48:42 <1> install(3740) [zypp::exec++] abstractspawnengine.cc(checkStatus):183 Pid 5136 successfully completed
 2022-06-17 17:48:42 <1> install(3740) [Interpreter] installation/proposal_runner.rb:332 Called YaST client returned.
 2022-06-17 17:48:42 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_initial_installation_proposal'
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_proposal ($["enable_back":true, "enable_next":true, "proposal":"initial"]) returned `next
+::endgroup::
+::group::Prepare Installation, result: success
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_19", "label":"Perform Installation", "name":"prepare_image"]
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepare_image ($["enable_back":true, "enable_next":true]) (17)
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepare_image ($["enable_back":true, "enable_next":true])
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_prepare_image'
 2022-06-17 17:48:42 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_prepare_image
-::group::Installation image, result: skipped
 2022-06-17 17:48:42 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_prepare_image.rb
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 17:48:42 <1> install(3740) [Ruby] clients/inst_prepare_image.rb(main):44 Preparing image for package selector
@@ -8591,14 +8589,14 @@ Storage ProposalSettings
 2022-06-17 17:48:42 <1> install(3740) [Pkg] Source_Download.cc(SourceProvideFileCommon):137 File not found: /images/images.xml
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ImageInstallation.rb(FindImageSet):807 Image list for installation not found
 2022-06-17 17:48:42 <1> install(3740) [Ruby] clients/inst_prepare_image.rb(main):81 Images for installation ready
-::endgroup::
 2022-06-17 17:48:42 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepare_image'
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepare_image ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Prepare Slideshow, result: success
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_20", "label":"Perform Installation", "name":"prepareprogress"]
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepareprogress ($["enable_back":true, "enable_next":true]) (18)
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepareprogress ($["enable_back":true, "enable_next":true])
-::group::Slideshow initialization, result: skipped
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_prepareprogress'
 2022-06-17 17:48:42 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_prepareprogress
 2022-06-17 17:48:42 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_prepareprogress.rb
@@ -9106,16 +9104,16 @@ Mems_allowed_list:	0
 voluntary_ctxt_switches:	5927
 nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:43 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepareprogress'
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepareprogress ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Disk Partitioning, result: success
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_21", "label":"Perform Installation", "name":"prepdisk"]
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepdisk ($["enable_back":true, "enable_next":true]) (19)
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepdisk ($["enable_back":true, "enable_next":true])
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_prepdisk'
 2022-06-17 17:48:43 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_prepdisk
 2022-06-17 17:48:43 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_prepdisk.rb
-::group::Disk partitioning, result: success
 2022-06-17 17:48:43 <1> install(3740) [Ruby] clients/inst_prepdisk.rb(run):52 BEGIN of inst_prepdisk
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/SlideShow.rb(MoveToStage):266 Moving to stage disk (0)
 2022-06-17 17:48:43 <1> install(3740) [Ruby] y2storage/storage_manager.rb(configure_snapper?):528 Configure Snapper? false
@@ -10199,9 +10197,10 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Ruby] clients/inst_prepdisk.rb(mount_in_target):89 Cmd: mount --bind /run /mnt/run
 2022-06-17 17:48:45 <1> install(3740) [Ruby] clients/inst_prepdisk.rb(run):55 END of inst_prepdisk
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepdisk'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepdisk ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Instsys cleanup, result: success
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_22", "label":"Perform Installation", "name":"instsys_cleanup"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_instsys_cleanup ($["enable_back":true, "enable_next":true]) (20)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_instsys_cleanup ($["enable_back":true, "enable_next":true])
@@ -10217,6 +10216,8 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_instsys_cleanup'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_instsys_cleanup ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Deploy Image, result: success
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_23", "label":"Perform Installation", "name":"deploy_image"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_deploy_image ($["enable_back":true, "enable_next":true]) (21)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_deploy_image ($["enable_back":true, "enable_next":true])
@@ -10227,13 +10228,14 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_deploy_image'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_deploy_image ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Start Installation, result: success
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_24", "label":"Perform Installation", "name":"kickoff"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_kickoff ($["enable_back":true, "enable_next":true]) (22)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_kickoff ($["enable_back":true, "enable_next":true])
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_kickoff'
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_kickoff
 2022-06-17 17:48:45 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_kickoff.rb
-::group::Prepare installation, result: success
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Mtab.rb(clone_to_target):20 Copying /etc/mtab to the target system...
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Mtab.rb(clone_to_target):36 Target /etc/mtab file: /dev/zram0 / ext2 rw,relatime 0 0
 proc /proc proc rw,relatime 0 0
@@ -10301,11 +10303,11 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] clients/inst_kickoff.rb:78 Called YaST client returned.
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_kickoff'
-::endgroup::
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_kickoff ($["enable_back":true, "enable_next":true]) returned `next
+::endgroup::
+::group::Package Installation, result: 1922 packages installed
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"no", "enable_next":"no", "id":"initial_25", "label":"Perform Installation", "name":"rpmcopy"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_rpmcopy ($["enable_back":false, "enable_next":false]) (23)
-::group::Package installation, result: 1923 packages installed
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_rpmcopy ($["enable_back":false, "enable_next":false])
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_rpmcopy'
 2022-06-17 17:48:45 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_rpmcopy
@@ -10483,15 +10485,15 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:00 <1> install(3740) [Ruby] clients/wrapper_slideshow_callbacks.rb(main):34 SlideShowCallbacks wrapper: result: nil
 2022-06-17 17:56:00 <1> install(3740) [Interpreter] modules/SlideShow.rb:607 Called YaST client returned.
 2022-06-17 17:56:00 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_rpmcopy'
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_rpmcopy ($["enable_back":false, "enable_next":false]) returned `next
+::endgroup::
+::group::Add add-on repositories, result: skipped
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_26", "label":"Perform Installation", "name":"addon_update_sources"]
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_addon_update_sources ($["enable_back":true, "enable_next":true]) (24)
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true])
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_addon_update_sources'
 2022-06-17 17:56:00 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_addon_update_sources
-::group::Adding update sources, result: skipped
 2022-06-17 17:56:00 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_addon_update_sources.rb
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 17:56:00 <1> install(3740) [Pkg] clients/inst_addon_update_sources.rb:57 Pkg Builtin called: TargetInitialize
@@ -10570,15 +10572,15 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:01 <1> install(3740) [Ruby] clients/inst_addon_update_sources.rb(main):66 sources for updates: $[]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] clients/inst_addon_update_sources.rb(main):71 sources to add: $[]
 2022-06-17 17:56:01 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_addon_update_sources'
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Add Repositoris from the control.xml, result: success
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_27", "label":"Perform Installation", "name":"extrasources"]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_extrasources ($["enable_back":true, "enable_next":true]) (25)
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_extrasources ($["enable_back":true, "enable_next":true])
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_extrasources'
 2022-06-17 17:56:01 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_extrasources
-::group::Adding extra repositories, result: Added 13 repositories
 2022-06-17 17:56:01 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_extrasources.rb
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 17:56:01 <1> install(3740) [Pkg] clients/inst_extrasources.rb:386 Pkg Builtin called: SourceStartManager
@@ -11156,30 +11158,30 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:01 <1> install(3740) [Pkg] PkgProgress.cc(_receiver):96 PkgReceiver progress: 20 (86%), running: true
 2022-06-17 17:56:01 <1> install(3740) [Pkg] PkgProgress.cc(Done):84 Evaluating ProcessDone callback...
 2022-06-17 17:56:01 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_extrasources'
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_extrasources ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Save HW Status, result: success
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_28", "label":"Perform Installation", "name":"save_hardware_status"]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_save_hardware_status ($["enable_back":true, "enable_next":true]) (26)
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_save_hardware_status ($["enable_back":true, "enable_next":true])
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_save_hardware_status'
 2022-06-17 17:56:01 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_save_hardware_status
 2022-06-17 17:56:01 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_save_hardware_status.rb
-::group::Save HW status, result: success
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":true, "enable_next":true]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] clients/inst_save_hardware_status.rb(main):35 Saving configured devices...
 2022-06-17 17:56:02 <1> install(3740) [Ruby] clients/inst_save_hardware_status.rb(main):45 Result: $["exit":1, "stderr":"", "stdout":"12: PCI 0d.0: 0106 SATA controller (AHCI 1.0)\n  [Created at pci.386]\n  Unique ID: qnJ_.3_X41NtKT36\n  SysFS ID: /devices/pci0000:00/0000:00:0d.0\n  SysFS BusID: 0000:00:0d.0\n  Hardware Class: storage\n  Model: \"Intel 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\"\n  Vendor: pci 0x8086 \"Intel Corporation\"\n  Device: pci 0x2829 \"82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\"\n  Revision: 0x02\n  Driver: \"ahci\"\n  Driver Modules: \"ahci\"\n  I/O Ports: 0xd060-0xd067 (rw)\n  I/O Ports: 0xd068-0xd06b (rw)\n  I/O Ports: 0xd070-0xd077 (rw)\n  I/O Ports: 0xd078-0xd07b (rw)\n  I/O Ports: 0xd080-0xd08f (rw)\n  Memory Range: 0xf0806000-0xf0807fff (rw,non-prefetchable)\n  IRQ: 21 (118668 events)\n  Module Alias: \"pci:v00008086d00002829sv00000000sd00000000bc01sc06i01\"\n  Driver Info #0:\n    Driver Status: ahci is active\n    Driver Activation Cmd: \"modprobe ahci\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n13: PCI 01.0: 0601 ISA bridge\n  [Created at pci.386]\n  Unique ID: vSkL.VF_F12pSc+0\n  SysFS ID: /devices/pci0000:00/0000:00:01.0\n  SysFS BusID: 0000:00:01.0\n  Hardware Class: bridge\n  Model: \"Intel 82371SB PIIX3 ISA [Natoma/Triton II]\"\n  Vendor: pci 0x8086 \"Intel Corporation\"\n  Device: pci 0x7000 \"82371SB PIIX3 ISA [Natoma/Triton II]\"\n  Module Alias: \"pci:v00008086d00007000sv00000000sd00000000bc06sc01i00\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n14: PCI 04.0: 0880 System peripheral\n  [Created at pci.386]\n  Unique ID: almT.GaWc2TmRdL6\n  SysFS ID: /devices/pci0000:00/0000:00:04.0\n  SysFS BusID: 0000:00:04.0\n  Hardware Class: unknown\n  Model: \"InnoTek Systemberatung VirtualBox Guest Service\"\n  Vendor: pci 0x80ee \"InnoTek Systemberatung GmbH\"\n  Device: pci 0xcafe \"VirtualBox Guest Service\"\n  Driver: \"vboxguest\"\n  Driver Modules: \"vboxguest\"\n  Device File: /dev/input/mice (/dev/input/mouse1)\n  Device Number: char 13:63 (char 13:33)\n  I/O Ports: 0xd040-0xd05f (rw)\n  Memory Range: 0xf0400000-0xf07fffff (rw,non-prefetchable)\n  Memory Range: 0xf0800000-0xf0803fff (ro,non-prefetchable)\n  IRQ: 20 (3578 events)\n  Module Alias: \"pci:v000080EEd0000CAFEsv00000000sd00000000bc08sc80i00\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n15: PCI 07.0: 0680 Bridge\n  [Created at pci.386]\n  Unique ID: M71A.YuPbaRFCEJD\n  SysFS ID: /devices/pci0000:00/0000:00:07.0\n  SysFS BusID: 0000:00:07.0\n  Hardware Class: bridge\n  Model: \"Intel 82371AB/EB/MB PIIX4 ACPI\"\n  Vendor: pci 0x8086 \"Intel Corporation\"\n  Device: pci 0x7113 \"82371AB/EB/MB PIIX4 ACPI\"\n  Revision: 0x08\n  Driver: \"piix4_smbus\"\n  Driver Modules: \"i2c_piix4\"\n  IRQ: 9 (no events)\n  Module Alias: \"pci:v00008086d00007113sv00000000sd00000000bc06sc80i00\"\n  Driver Info #0:\n    Driver Status: i2c_piix4 is active\n    Driver Activation Cmd: \"modprobe i2c_piix4\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n16: PCI 00.0: 0600 Host bridge\n  [Created at pci.386]\n  Unique ID: qLht.9Hid9SgXpm5\n  SysFS ID: /devices/pci0000:00/0000:00:00.0\n  SysFS BusID: 0000:00:00.0\n  Hardware Class: bridge\n  Model: \"Intel 440FX - 82441FX PMC [Natoma]\"\n  Vendor: pci 0x8086 \"Intel Corporation\"\n  Device: pci 0x1237 \"440FX - 82441FX PMC [Natoma]\"\n  Revision: 0x02\n  Module Alias: \"pci:v00008086d00001237sv00000000sd00000000bc06sc00i00\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n17: PCI 03.0: 0200 Ethernet controller\n  [Created at pci.386]\n  Unique ID: 3hqH.pkM7KXDR457\n  SysFS ID: /devices/pci0000:00/0000:00:03.0\n  SysFS BusID: 0000:00:03.0\n  Hardware Class: unknown\n  Model: \"Red Hat Virtio network device\"\n  Vendor: pci 0x1af4 \"Red Hat, Inc.\"\n  Device: pci 0x1000 \"Virtio network device\"\n  SubVendor: pci 0x1af4 \"Red Hat, Inc.\"\n  SubDevice: pci 0x0001 \n  Driver: \"virtio-pci\"\n  Driver Modules: \"virtio_pci\"\n  I/O Ports: 0xd020-0xd03f (rw)\n  IRQ: 19 (239 events)\n  Module Alias: \"pci:v00001AF4d00001000sv00001AF4sd00000001bc02sc00i00\"\n  Driver Info #0:\n    Driver Status: virtio_pci is active\n    Driver Activation Cmd: \"modprobe virtio_pci\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n18: PCI 01.1: 0101 IDE interface (ISA Compatibility mode controller, supports both channels switched to PCI native mode, supports bus mastering)\n  [Created at pci.386]\n  Unique ID: mnDB.V_9AHXukieF\n  SysFS ID: /devices/pci0000:00/0000:00:01.1\n  SysFS BusID: 0000:00:01.1\n  Hardware Class: storage\n  Model: \"Intel 82371AB/EB/MB PIIX4 IDE\"\n  Vendor: pci 0x8086 \"Intel Corporation\"\n  Device: pci 0x7111 \"82371AB/EB/MB PIIX4 IDE\"\n  Revision: 0x01\n  Driver: \"ata_piix\"\n  Driver Modules: \"ata_piix\"\n  I/O Ports: 0x1f0-0x1f7 (rw)\n  I/O Port: 0x3f6 (rw)\n  I/O Ports: 0x170-0x177 (rw)\n  I/O Port: 0x376 (rw)\n  I/O Ports: 0xd000-0xd00f (rw)\n  Module Alias: \"pci:v00008086d00007111sv00000000sd00000000bc01sc01i8A\"\n  Driver Info #0:\n    Driver Status: ata_piix is active\n    Driver Activation Cmd: \"modprobe ata_piix\"\n  Driver Info #1:\n    Driver Status: ata_generic is active\n    Driver Activation Cmd: \"modprobe ata_generic\"\n  Driver Info #2:\n    Driver Status: pata_acpi is active\n    Driver Activation Cmd: \"modprobe pata_acpi\"\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n19: PCI 06.0: 0c03 USB Controller (OHCI)\n  [Created at pci.386]\n  Unique ID: H0_h.R0jUyPrhR+2\n  SysFS ID: /devices/pci0000:00/0000:00:06.0\n  SysFS BusID: 0000:00:06.0\n  Hardware Class: usb controller\n  Model: \"Apple KeyLargo/Intrepid USB\"\n  Vendor: pci 0x106b \"Apple Inc.\"\n  Device: pci 0x003f \"KeyLargo/Intrepid USB\"\n  Driver: \"ohci-pci\"\n  Driver Modules: \"ohci_pci\"\n  Memory Range: 0xf0804000-0xf0804fff (rw,non-prefetchable)\n  IRQ: 22 (36 events)\n  Module Alias: \"pci:v0000106Bd0000003Fsv00000000sd00000000bc0Csc03i10\"\n  Driver Info #0:\n    Driver Status: ohci-hcd is active\n    Driver Activation Cmd: \"modprobe ohci-hcd\"\n  Driver Info #1:\n    Driver Status: ohci_pci is active\n    Driver Activation Cmd: \"modprobe ohci_pci\"\n  Config Status: cfg=no, avail=yes, need=no, active=unknown\n\n20: PCI 02.0: 0300 VGA compatible controller (VGA)\n  [Created at pci.386]\n  Unique ID: _Znp.jBKePf3JQB5\n  SysFS ID: /devices/pci0000:00/0000:00:02.0\n  SysFS BusID: 0000:00:02.0\n  Hardware Class: graphics card\n  Model: \"VMware VMWARE0405\"\n  Vendor: pci 0x15ad \"VMware, Inc.\"\n  Device: pci 0x0405 \"VMWARE0405\"\n  SubVendor: pci 0x15ad \"VMware, Inc.\"\n  SubDevice: pci 0x0405 \n  Driver: \"vmwgfx\"\n  Driver Modules: \"vmwgfx\"\n  I/O Ports: 0xd010-0xd01f (rw)\n  Memory Range: 0xe0000000-0xe0ffffff (ro,non-prefetchable)\n  Memory Range: 0xf0000000-0xf01fffff (rw,non-prefetchable)\n  Memory Range: 0x000c0000-0x000dffff (rw,non-prefetchable,disabled)\n  IRQ: 18 (1916 events)\n  I/O Ports: 0x3c0-0x3df (rw)\n  Module Alias: \"pci:v000015ADd00000405sv000015ADsd00000405bc03sc00i00\"\n  Driver Info #0:\n    XFree86 v4 Server Module: vmware\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n22: None 00.0: 10600 Disk\n  [Created at block.245]\n  Unique ID: rVCW.Fxp0d3BezAE\n  SysFS ID: /class/block/zram1\n  Hardware Class: disk\n  Model: \"Disk\"\n  Device File: /dev/zram1\n  Device Number: block 254:1\n  Size: 262144 sectors a 4096 bytes\n  Capacity: 1 GB (1073741824 bytes)\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n23: SCSI 100.0: 10602 CD-ROM (DVD)\n  [Created at block.249]\n  Unique ID: KD9E.bdbWQaKnov0\n  Parent ID: mnDB.V_9AHXukieF\n  SysFS ID: /class/block/sr0\n  SysFS BusID: 1:0:0:0\n  SysFS Device Link: /devices/pci0000:00/0000:00:01.1/ata2/host1/target1:0:0/1:0:0:0\n  Hardware Class: cdrom\n  Model: \"VBOX CD-ROM\"\n  Vendor: \"VBOX\"\n  Device: \"CD-ROM\"\n  Revision: \"1.0\"\n  Driver: \"ata_piix\", \"sr\"\n  Driver Modules: \"ata_piix\", \"sr_mod\"\n  Device File: /dev/sr0 (/dev/sg0)\n  Device Files: /dev/sr0, /dev/dvd, /dev/disk/by-label/openSUSE-Leap-15.4-DVD-x86_64243, /dev/disk/by-uuid/2022-05-28-00-52-28-55, /dev/disk/by-path/pci-0000:00:01.1-ata-2, /dev/disk/by-id/ata-VBOX_CD-ROM_VB2-01700376, /dev/disk/by-path/pci-0000:00:01.1-ata-2.0, /dev/cdrom\n  Device Number: block 11:0 (char 21:0)\n  Features: DVD, MRW, MRW-W\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n  Attached to: #18 (IDE interface)\n  Drive Speed: 32\n  Volume ID: \"openSUSE-Leap-15.4-DVD-x86_64243\"\n  Application: \"openSUSE-Leap-15.4-DVD-x86_64-Build243.2-Media\"\n  Publisher: \"SUSE LINUX GmbH\"\n  Preparer: \"KIWI - http://opensuse.github.com/kiwi\"\n  Creation date: \"2022052800522855\"\n  El Torito info: platform 0, bootable\n    Boot Catalog: at sector 0x0014\n    Id String: \"SUSE LINUX GmbH\"\n    Media: none starting at sector 0x12fc\n    Load: 2048 bytes\n\n24: IDE 200.0: 10600 Disk\n  [Created at block.245]\n  Unique ID: 3OOL.+zra8ov413D\n  Parent ID: qnJ_.3_X41NtKT36\n  SysFS ID: /class/block/sda\n  SysFS BusID: 2:0:0:0\n  SysFS Device Link: /devices/pci0000:00/0000:00:0d.0/ata3/host2/target2:0:0/2:0:0:0\n  Hardware Class: disk\n  Model: \"VBOX HARDDISK\"\n  Vendor: \"VBOX\"\n  Device: \"HARDDISK\"\n  Revision: \"1.0\"\n  Serial ID: \"VBbaedcba9-cb2ecbdb\"\n  Driver: \"ahci\", \"sd\"\n  Driver Modules: \"ahci\", \"sd_mod\"\n  Device File: /dev/sda\n  Device Files: /dev/sda, /dev/disk/by-path/pci-0000:00:0d.0-ata-1, /dev/disk/by-id/ata-VBOX_HARDDISK_VBbaedcba9-cb2ecbdb, /dev/disk/by-path/pci-0000:00:0d.0-ata-1.0, /dev/disk/by-id/scsi-1ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb, /dev/disk/by-id/scsi-SATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb, /dev/disk/by-id/scsi-0ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb\n  Device Number: block 8:0-8:15\n  BIOS id: 0x80\n  Geometry (Logical): CHS 2088/255/63\n  Size: 33554432 sectors a 512 bytes\n  Capacity: 16 GB (17179869184 bytes)\n  Geometry (BIOS EDD): CHS 33288/16/63\n  Size (BIOS EDD): 33554432 sectors\n  Geometry (BIOS Legacy): CHS 1024/255/63\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n  Attached to: #12 (SATA controller)\n\n25: None 00.0: 11300 Partition\n  [Created at block.434]\n  Unique ID: bdUI.SE1wIdpsiiC\n  Parent ID: 3OOL.+zra8ov413D\n  SysFS ID: /class/block/sda/sda1\n  Hardware Class: partition\n  Model: \"Partition\"\n  Device File: /dev/sda1\n  Device Files: /dev/sda1, /dev/disk/by-id/scsi-1ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part1, /dev/disk/by-id/ata-VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part1, /dev/disk/by-path/pci-0000:00:0d.0-ata-1-part1, /dev/disk/by-path/pci-0000:00:0d.0-ata-1.0-part1, /dev/disk/by-id/scsi-0ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part1, /dev/disk/by-partuuid/53838d02-a865-4684-acaf-8d1d8cd722f9, /dev/disk/by-id/scsi-SATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part1\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n  Attached to: #24 (Disk)\n\n26: None 00.0: 11300 Partition\n  [Created at block.434]\n  Unique ID: 2pkM.SE1wIdpsiiC\n  Parent ID: 3OOL.+zra8ov413D\n  SysFS ID: /class/block/sda/sda2\n  Hardware Class: partition\n  Model: \"Partition\"\n  Device File: /dev/sda2\n  Device Files: /dev/sda2, /dev/disk/by-partuuid/c352d3dd-cc47-45de-912f-b22050f43b13, /dev/disk/by-id/scsi-1ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part2, /dev/disk/by-id/ata-VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part2, /dev/disk/by-id/scsi-0ATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part2, /dev/disk/by-path/pci-0000:00:0d.0-ata-1.0-part2, /dev/disk/by-path/pci-0000:00:0d.0-ata-1-part2, /dev/disk/by-id/scsi-SATA_VBOX_HARDDISK_VBbaedcba9-cb2ecbdb-part2, /dev/disk/by-uuid/ff1b76d2-1fce-4322-a72e-cea64c537df9\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n  Attached to: #24 (Disk)\n\n27: None 00.0: 10600 Disk\n  [Created at block.245]\n  Unique ID: OKyR.Fxp0d3BezAE\n  SysFS ID: /class/block/zram0\n  Hardware Class: disk\n  Model: \"Disk\"\n  Device File: /dev/zram0\n  Device Number: block 254:0\n  Size: 262144 sectors a 4096 bytes\n  Capacity: 1 GB (1073741824 bytes)\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n29: USB 00.0: 10503 USB Mouse\n  [Created at usb.122]\n  Unique ID: ADDn.L99d0pZEIEA\n  Parent ID: k4bc.orx_URqq2_3\n  SysFS ID: /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0\n  SysFS BusID: 1-1:1.0\n  Hardware Class: mouse\n  Model: \"VirtualBox USB Tablet\"\n  Hotplug: USB\n  Vendor: usb 0x80ee \"VirtualBox\"\n  Device: usb 0x0021 \"USB Tablet\"\n  Revision: \"1.00\"\n  Compatible to: int 0x0210 0x0045\n  Driver: \"usbhid\"\n  Driver Modules: \"usbhid\"\n  Device File: /dev/input/mice (/dev/input/mouse2)\n  Device Files: /dev/input/mice, /dev/input/mouse2, /dev/input/event7, /dev/input/js1, /dev/input/by-path/pci-0000:00:06.0-usb-0:1:1.0-event-mouse, /dev/input/by-id/usb-VirtualBox_USB_Tablet-event-mouse, /dev/input/by-id/usb-VirtualBox_USB_Tablet-mouse, /dev/input/by-path/pci-0000:00:06.0-usb-0:1:1.0-mouse\n  Device Number: char 13:63 (char 13:34)\n  Speed: 12 Mbps\n  Module Alias: \"usb:v80EEp0021d0100dc00dsc00dp00ic03isc00ip00in00\"\n  Driver Info #0:\n    Buttons: 5\n    Wheels: 4\n    XFree86 Protocol: explorerps/2\n    GPM Protocol: exps2\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n  Attached to: #28 (Hub)\n\n30: PS/2 00.0: 10800 Keyboard\n  [Created at input.226]\n  Unique ID: nLyy.+49ps10DtUF\n  Hardware Class: keyboard\n  Model: \"AT Translated Set 2 keyboard\"\n  Vendor: 0x0001 \n  Device: 0x0001 \"AT Translated Set 2 keyboard\"\n  Compatible to: int 0x0211 0x0001\n  Device File: /dev/input/event0\n  Device Files: /dev/input/event0, /dev/input/by-path/platform-i8042-serio-0-event-kbd\n  Device Number: char 13:64\n  Driver Info #0:\n    XkbRules: xfree86\n    XkbModel: pc104\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n31: PS/2 00.0: 10500 PS/2 Mouse\n  [Created at input.249]\n  Unique ID: AH6Q.bGO0sOimOM3\n  Hardware Class: mouse\n  Model: \"Mouse\"\n  Vendor: int 0x80ee \n  Device: int 0x0100 \"Mouse\"\n  Compatible to: int 0x0210 0x0025\n  Device File: /dev/input/mice (/dev/input/mouse0)\n  Device Files: /dev/input/mice, /dev/input/mouse0, /dev/input/event1, /dev/input/by-path/platform-i8042-serio-1-event-mouse, /dev/input/by-path/platform-i8042-serio-1-mouse\n  Device Number: char 13:63 (char 13:32)\n  Driver Info #0:\n    Buttons: 5\n    Wheels: 2\n    XFree86 Protocol: explorerps/2\n    GPM Protocol: exps2\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n32: PS/2 00.0: 10500 PS/2 Mouse\n  [Created at input.249]\n  Unique ID: AH6Q.+c2nEW66ic2\n  Hardware Class: mouse\n  Model: \"VirtualBox mouse integration\"\n  Vendor: 0x80ee \n  Device: 0xcafe \"VirtualBox mouse integration\"\n  Compatible to: int 0x0210 0x0001\n  Device File: /dev/input/mice (/dev/input/mouse1)\n  Device Files: /dev/input/mice, /dev/input/mouse1, /dev/input/event3, /dev/input/by-path/pci-0000:00:04.0-event-mouse\n  Device Number: char 13:63 (char 13:33)\n  Driver Info #0:\n    Buttons: 1\n    Wheels: 0\n    XFree86 Protocol: explorerps/2\n    GPM Protocol: exps2\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\n37: Serial 00.0: 10801 Console\n  [Created at kbd.178]\n  Unique ID: xoPc.5lXXuQkv_C5\n  Hardware Class: keyboard\n  Model: \"serial console\"\n  Device: \"serial console\"\n  Device File: /dev/tty7\n  Config Status: cfg=new, avail=yes, need=no, active=unknown\n\nSave Configuration:\n  qnJ_.3_X41NtKT36: ok\n  vSkL.VF_F12pSc+0: ok\n  almT.GaWc2TmRdL6: ok\n  M71A.YuPbaRFCEJD: ok\n  qLht.9Hid9SgXpm5: ok\n  3hqH.pkM7KXDR457: ok\n  mnDB.V_9AHXukieF: ok\n  H0_h.R0jUyPrhR+2: ok\n  _Znp.jBKePf3JQB5: ok\n  rVCW.Fxp0d3BezAE: ok\n  KD9E.bdbWQaKnov0: ok\n  3OOL.+zra8ov413D: ok\n  bdUI.SE1wIdpsiiC: ok\n  2pkM.SE1wIdpsiiC: ok\n  OKyR.Fxp0d3BezAE: ok\n  ADDn.L99d0pZEIEA: ok\n  nLyy.+49ps10DtUF: ok\n  AH6Q.bGO0sOimOM3: ok\n  AH6Q.+c2nEW66ic2: ok\n  xoPc.5lXXuQkv_C5: ok\n"]
 2022-06-17 17:56:02 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
-::endgroup::
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_save_hardware_status'
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_save_hardware_status ($["enable_back":true, "enable_next":true]) returned `auto
+::endgroup::
+::group::Finish installation, result: success
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"no", "id":"initial_29", "label":"Perform Installation", "name":"finish"]
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_finish ($["enable_back":false, "enable_next":true]) (27)
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_finish ($["enable_back":false, "enable_next":true])
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'before_finish'
 2022-06-17 17:56:02 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Calling YaST client inst_finish
 2022-06-17 17:56:02 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/inst_finish.rb
-::group::Finishing installation, resul: success
 2022-06-17 17:56:02 <1> install(3740) [Ruby] modules/GetInstArgs.rb(Init):48 args=$["enable_back":false, "enable_next":true]
 2022-06-17 17:56:02 <1> install(3740) [Ruby] clients/inst_finish.rb(setup_slide_show):286 SlideShow dialog not yet created
 2022-06-17 17:56:02 <1> install(3740) [Interpreter] modules/SlideShow.rb:594 Calling YaST client wrapper_slideshow_callbacks
