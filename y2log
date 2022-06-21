@@ -24,7 +24,7 @@
 2022-06-17 15:46:44 <1> install(3740) [qt-ui] YQApplication.cc(currentFont):339 Loaded 10 pixel font: Sans Serif,-1,10,5,50,0,0,0,0,0
 2022-06-17 15:46:44 <1> install(3740) [qt-ui] YQUI.cc(initUI):228 YQUI initialized. Thread ID: 0x0x7f10cff44700
 2022-06-17 15:46:44 <1> install(3740) [ui] YCP_UI.cc(SetApplicationTitle):1742 Setting application title to '"YaST2 - installation @ install
-::group::Initialize Installation, result: success
+::group::Initialize Installation
 2022-06-17 15:46:44 <1> install(3740) [Interpreter] bin/y2start:60 Calling YaST client installation
 2022-06-17 15:46:44 <1> install(3740) [Ruby] yast/wfm.rb(run_client):342 Call client /mounts/mp_0001/usr/share/YaST2/clients/installation.rb
 2022-06-17 15:46:44 <1> install(3740) [Pkg] PkgModule.cc(instance):68 Redirecting ZYPP log to y2log
@@ -545,7 +545,7 @@
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_install_inf'
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_install_inf ($["enable_back":false, "enable_next":true]) returned `next
 ::endgroup::
-::group::DHCP Setup, result: success
+::group::DHCP Setup (eth0 configured with DHCP)
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_2", "label":"Network Autosetup", "name":"setup_dhcp"]
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_setup_dhcp ($["enable_back":true, "enable_next":true]) (1)
 2022-06-17 11:46:41 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_setup_dhcp ($["enable_back":true, "enable_next":true])
@@ -702,7 +702,7 @@
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_setup_dhcp'
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_setup_dhcp ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Self update, result: skipped
+::group::Self update (skipped, no repository configured)
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_3", "label":"Installer Update", "name":"update_installer"]
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_update_installer ($["enable_back":true, "enable_next":true]) (2)
 2022-06-17 11:47:05 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_update_installer ($["enable_back":true, "enable_next":true])
@@ -986,7 +986,7 @@
 2022-06-17 11:47:07 <1> install(3740) [Interpreter] modules/ProductControl.rb:1302 Called YaST client returned.
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_update_installer'
 ::endgroup::
-::group::Initialize installation repository, result: success
+::group::Initialize installation repository (using cd:/?devices=/dev/disk/by-id/ata-VBOX_CD-ROM_VB2-01700376)
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_update_installer ($["enable_back":true, "enable_next":true]) returned `next
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_4", "label":"Repositories Initialization", "name":"repositories_initialization"]
 2022-06-17 11:47:07 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_repositories_initialization ($["enable_back":true, "enable_next":true]) (3)
@@ -2286,7 +2286,7 @@
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_repositories_initialization'
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_repositories_initialization ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Product license, result: confirmed
+::group::Product license (confirmed by user)
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["arguments":$["first_run":"yes"], "enable_back":"no", "enable_next":"yes", "id":"initial_5", "label":"Welcome", "name":"complex_welcome", "retranslate":true]
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_complex_welcome ($["enable_back":false, "enable_next":true, "first_run":"yes"]) (4)
 2022-06-17 11:47:11 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_complex_welcome ($["enable_back":false, "enable_next":true, "first_run":"yes"])
@@ -2396,7 +2396,7 @@
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(FindMatchingWorkflow):499 Index 0 is out of array size
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(FindMatchingWorkflow):501 Index 0 is out of array size
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(block in AddWizardSteps):812 There are no (more) steps for $["mode":"installation", "stage":"continue"], section will be disabled
-::group::Network Activation, result skipped
+::group::Network Activation (skipped)
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_6", "label":"Network Activation", "name":"lan"]
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_lan ($["enable_back":true, "enable_next":true]) (5)
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_lan ($["enable_back":true, "enable_next":true])
@@ -2415,7 +2415,7 @@
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_lan'
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_lan ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::System Analysis, result: success
+::group::System Analysis
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_8", "label":"System Analysis", "name":"system_analysis"]
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_system_analysis ($["enable_back":true, "enable_next":true]) (6)
 2022-06-17 11:47:19 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_system_analysis ($["enable_back":true, "enable_next":true])
@@ -3268,7 +3268,7 @@
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_system_analysis'
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_system_analysis ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Online Repositories, result: skipped
+::group::Online Repositories (skipped by user)
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"yes", "id":"initial_9", "label":"Online Repositories", "name":"productsources"]
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_productsources ($["enable_back":true, "enable_next":true]) (7)
 2022-06-17 11:47:22 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_productsources ($["enable_back":true, "enable_next":true])
@@ -3286,7 +3286,7 @@
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_productsources'
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_productsources ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Download Release Notes, result: success
+::group::Download Release Notes (downloaded from http://doc.opensuse.org/release-notes/x86_64/openSUSE/Leap/15.4/release-notes-openSUSE.rpm)
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_10", "name":"download_release_notes"]
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_download_release_notes ($["enable_back":true, "enable_next":true]) (8)
 2022-06-17 11:47:24 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_download_release_notes ($["enable_back":true, "enable_next":true])
@@ -3441,7 +3441,7 @@
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_download_release_notes'
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_download_release_notes ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Select System Role, result: selected KDE role
+::group::Select System Role (selected KDE role)
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_11", "name":"system_role"]
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_system_role ($["enable_back":true, "enable_next":true]) (9)
 2022-06-17 11:47:25 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_system_role ($["enable_back":true, "enable_next":true])
@@ -3825,7 +3825,7 @@
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_system_role'
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_system_role ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Add-ons, result: skipped
+::group::Add-ons (skipped, no add-on defined)
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_12", "label":"Add-On Products", "name":"add-on"]
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_add-on ($["enable_back":true, "enable_next":true]) (10)
 2022-06-17 11:47:31 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_add-on ($["enable_back":true, "enable_next":true])
@@ -3839,7 +3839,7 @@
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_add-on'
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_add-on ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Disk Proposal, result: Format /dev/sda1 (/boot) with FAT (8Mib), format /dev/sda2 (/) with Btrfs (16GiB)
+::group::Disk Proposal (proposed: Format /dev/sda1 (/boot) with FAT (8Mib), format /dev/sda2 (/) with Btrfs (16GiB))
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"yes", "enable_next":"yes", "id":"initial_13", "label":"Disk", "name":"disk_proposal"]
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_disk_proposal ($["enable_back":true, "enable_next":true]) (11)
 2022-06-17 11:47:32 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_disk_proposal ($["enable_back":true, "enable_next":true])
@@ -4416,7 +4416,7 @@ Storage ProposalSettings
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_disk_proposal'
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_disk_proposal ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Time Zone selection, result: TZ: Europe/Czech Republic, HW clock: true
+::group::Time Zone selection, (TZ: Europe/Czech Republic, HW clock: true)
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["arguments":$["first_run":"yes"], "enable_back":"yes", "id":"initial_14", "label":"Time Zone", "name":"timezone"]
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"]) (12)
 2022-06-17 11:47:47 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"])
@@ -4516,7 +4516,7 @@ Storage ProposalSettings
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_timezone'
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_timezone ($["enable_back":true, "enable_next":true, "first_run":"yes"]) returned `next
 ::endgroup::
-::group::User Configuration, result: root password set, initial user set, autologin enabled
+::group::User Configuration (root password set, initial user set, autologin enabled)
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_15", "label":"User Settings", "name":"user_first"]
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_user_first ($["enable_back":true, "enable_next":true]) (13)
 2022-06-17 11:48:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_user_first ($["enable_back":true, "enable_next":true])
@@ -4616,7 +4616,7 @@ Storage ProposalSettings
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_root_first'
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_root_first ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Installation summary, reult: installation confirmed
+::group::Installation summary
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["heading":"yes", "id":"initial_17", "label":"Installation"]
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["execute":"inst_proposal", "id":"initial_18", "label":"Installation Overview", "name":"initial_installation_proposal", "proposal":"initial"]
 2022-06-17 17:48:10 <1> install(3740) [Ruby] modules/ProductControl.rb(getClientName):393 Step name 'initial_installation_proposal' executes 'inst_proposal'
@@ -8494,7 +8494,7 @@ Storage ProposalSettings
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_initial_installation_proposal'
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_proposal ($["enable_back":true, "enable_next":true, "proposal":"initial"]) returned `next
 ::endgroup::
-::group::Prepare Installation, result: success
+::group::Prepare Installation
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_19", "label":"Perform Installation", "name":"prepare_image"]
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepare_image ($["enable_back":true, "enable_next":true]) (17)
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepare_image ($["enable_back":true, "enable_next":true])
@@ -8593,7 +8593,7 @@ Storage ProposalSettings
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepare_image'
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepare_image ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Prepare Slideshow, result: success
+::group::Prepare Slideshow
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_20", "label":"Perform Installation", "name":"prepareprogress"]
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepareprogress ($["enable_back":true, "enable_next":true]) (18)
 2022-06-17 17:48:42 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepareprogress ($["enable_back":true, "enable_next":true])
@@ -9107,7 +9107,7 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepareprogress'
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepareprogress ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Disk Partitioning, result: success
+::group::Disk Partitioning (formatted /dev/sda1 with FAT, formatted /dev/sda2 with Btrfs)
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_21", "label":"Perform Installation", "name":"prepdisk"]
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_prepdisk ($["enable_back":true, "enable_next":true]) (19)
 2022-06-17 17:48:43 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_prepdisk ($["enable_back":true, "enable_next":true])
@@ -10200,7 +10200,7 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_prepdisk'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_prepdisk ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Instsys cleanup, result: success
+::group::Instsys cleanup
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_22", "label":"Perform Installation", "name":"instsys_cleanup"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_instsys_cleanup ($["enable_back":true, "enable_next":true]) (20)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_instsys_cleanup ($["enable_back":true, "enable_next":true])
@@ -10217,7 +10217,7 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_instsys_cleanup'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_instsys_cleanup ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Deploy Image, result: success
+::group::Deploy Image (skipped, no image defined)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_23", "label":"Perform Installation", "name":"deploy_image"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_deploy_image ($["enable_back":true, "enable_next":true]) (21)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_deploy_image ($["enable_back":true, "enable_next":true])
@@ -10229,7 +10229,7 @@ nonvoluntary_ctxt_switches:	185
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_deploy_image'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_deploy_image ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Start Installation, result: success
+::group::Start Installation
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_24", "label":"Perform Installation", "name":"kickoff"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_kickoff ($["enable_back":true, "enable_next":true]) (22)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_kickoff ($["enable_back":true, "enable_next":true])
@@ -10305,7 +10305,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_kickoff'
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_kickoff ($["enable_back":true, "enable_next":true]) returned `next
 ::endgroup::
-::group::Package Installation, result: 1922 packages installed
+::group::Package Installation (1922 packages installed)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["enable_back":"no", "enable_next":"no", "id":"initial_25", "label":"Perform Installation", "name":"rpmcopy"]
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_rpmcopy ($["enable_back":false, "enable_next":false]) (23)
 2022-06-17 17:48:45 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_rpmcopy ($["enable_back":false, "enable_next":false])
@@ -10488,7 +10488,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_rpmcopy'
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_rpmcopy ($["enable_back":false, "enable_next":false]) returned `next
 ::endgroup::
-::group::Add add-on repositories, result: skipped
+::group::Add add-on repositories (skipped, no repositories defined)
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_26", "label":"Perform Installation", "name":"addon_update_sources"]
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_addon_update_sources ($["enable_back":true, "enable_next":true]) (24)
 2022-06-17 17:56:00 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true])
@@ -10575,7 +10575,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_addon_update_sources'
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_addon_update_sources ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Add Repositoris from the control.xml, result: Added 13 repositories
+::group::Add Repositoris from the control.xml (added 13 repositories)
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_27", "label":"Perform Installation", "name":"extrasources"]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_extrasources ($["enable_back":true, "enable_next":true]) (25)
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_extrasources ($["enable_back":true, "enable_next":true])
@@ -11161,7 +11161,7 @@ sysfs /sys sysfs rw,relatime 0 0
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/Hooks.rb(execute):167 Executing hook 'after_extrasources'
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1337 Calling `inst_extrasources ($["enable_back":true, "enable_next":true]) returned `auto
 ::endgroup::
-::group::Save HW Status, result: success
+::group::Save HW Status
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1230 Current step: $["id":"initial_28", "label":"Perform Installation", "name":"save_hardware_status"]
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1273 Running module: `inst_save_hardware_status ($["enable_back":true, "enable_next":true]) (26)
 2022-06-17 17:56:01 <1> install(3740) [Ruby] modules/ProductControl.rb(RunFrom):1275 Calling `inst_save_hardware_status ($["enable_back":true, "enable_next":true])
